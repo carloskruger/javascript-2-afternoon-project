@@ -181,7 +181,7 @@ function removeItem(myGroceryList, item) {
 			indexToRemove = i;
 		}
 	}
-	splice(indexToRemove, 1);
+	myGroceryList.splice(indexToRemove, 1);
 	return myGroceryList;
 }
 
