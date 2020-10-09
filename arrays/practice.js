@@ -175,17 +175,34 @@ var myGroceryList = ["chips", "pizza", "hotpockets", "MtnDew", "corndogs"];
 
 //Code Here
 function removeItem(myGroceryList, item) {
-	let indexToRemove;
+	let emptyArray = [];
+	if (myGroceryList === false) {
+		return emptyArray;
+	}
+
+	if (item === false) {
+		return emptyArray;
+	}
+
 	for (let i = 0; i < myGroceryList.length; i++) {
 		if (myGroceryList[i] === item) {
-			indexToRemove = i;
+			myGroceryList.splice(i, 1);
 		}
 	}
-	myGroceryList.splice(indexToRemove, 1);
+
 	return myGroceryList;
 }
 
 function addItem(myGroceryList, item) {
+	let emptyArray = [];
+	if (myGroceryList == false) {
+		return emptyArray;
+	}
+
+	if (item == false) {
+		return emptyArray;
+	}
+
 	myGroceryList.push(item);
 	return myGroceryList;
 }
@@ -321,11 +338,11 @@ console.log(devMountainEmployees.length);
 //Code Here
 let indexToDelete;
 for (let i = 0; i < devMountainEmployees.length; i++) {
-	if (devMountainEmployees.name == "cahlan") {
-		indexToDelete = i;
+	if (devMountainEmployees.name == "Cahlan") {
+		devMountainEmployees.splice(i, 1);
 	}
 }
-devMountainEmployees.splice(i, 1);
+
 ////////// PROBLEM 13 //////////
 
 /*
@@ -388,11 +405,11 @@ users.push(user4);
 
 //Code Here
 for (let i = 0; int < users.length; i++) {
-	if (users[i].email == "mark.mciver@devmounta.in") {
-		let markIndex = i;
+	if (users[i].email === "mark.mciver@devmounta.in") {
+		users.splice(i, 1);
 	}
 }
-users.splice(markIndex, 1);
+
 console.log(users);
 /*
   The activity we just did is very much how data works in 'the real world'.
